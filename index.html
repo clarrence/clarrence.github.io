@@ -21,7 +21,15 @@ input[type="text"]
      font-family: 'Press Start 2p', sans-serif;
 font-size:calc(9px + 0.4vw);
 color: WHITE;
+background-color:transparent;
     text-align: center; 
+     width: 33%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+        border: none;
+    border-bottom: 2px solid hot pink;
+
 }
 
 
@@ -323,7 +331,6 @@ EDUCATION<br><br>
 <br><br><br>
       
 
- <input autocomplete="off" id="search-field" name="q" placeholder="say hi" size="220px" type="text" value="youcanemaillaurie@gmail.com">    
       
       
 EXHIBITIONS <br><br>
@@ -337,7 +344,7 @@ Website written by Laurie Owens
 <a href="https://imdb.com/name/nm4960297/">IMDB</a>      <br>  
       
             <br><br><br>
-      <a href="mailto:youcanemaillaurie@gmail.com">youcanemaillaurie@gmail.com</a>
+ <input autocomplete="off" id="search-field" name="q" placeholder="say hi" size="220px" type="text" value="youcanemaillaurie@gmail.com">    
       
   </h3>  
   
@@ -534,4 +541,8 @@ function onVrViewLoad() {
         }, animationLength);
     }
 //# sourceURL=pen.js
+    
+ var input = document.getElementById('myTextInput');
+input.focus();
+input.select();
 </script>
