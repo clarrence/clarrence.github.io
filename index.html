@@ -67,16 +67,7 @@ color: WHITE;
 
 }
 
-.button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
+
 
 h2 {
 font-family: 'Press Start 2p', sans-serif;
@@ -223,6 +214,48 @@ iframe{
 }
 
 
+.button1 {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button1:hover span {
+  padding-right: 25px;
+}
+
+.button1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+    
+    
+    
 #tumblr_controls, .tmblr-iframe{display:none !important;}
 
  .app-cta-button { opacity: 0 !important; }
@@ -355,7 +388,14 @@ Website written by Laurie Owens
       
       <input type="text" value="youcanemaillaurie@gmail.com" id="myInput">
 
-<button onclick="myFunction()">Copy Email</button>
+      <br>
+      
+
+      
+      
+      <button class="button1" onclick="myFunction()">Copy Email style="vertical-align:middle"><span>Hover </span></button>
+      
+      
   </h3>  
   
       
