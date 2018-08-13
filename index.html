@@ -276,41 +276,49 @@ iframe{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    transition: .5s ease;
+
 
 }
 
 .button:hover {
+opacity: 0.7;
+}
+
+.button{
   -webkit-animation-name: wiggle;
   -ms-animation-name: wiggle;
-  -ms-animation-duration: 1000ms;
-  -webkit-animation-duration: 1000ms;
-  -webkit-animation-iteration-count: 1;
-  -ms-animation-iteration-count: 1;
+  -ms-animation-duration: 10s;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
   -ms-animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0s;
+
 }
 
 @-webkit-keyframes wiggle {
-  0% {-webkit-transform: rotate(10deg);}
-  25% {-webkit-transform: rotate(-10deg);}
-  50% {-webkit-transform: rotate(20deg);}
-  75% {-webkit-transform: rotate(-5deg);}
+  0% {-webkit-transform: rotate(0deg);}
+  25% {-webkit-transform: rotate(-5deg);}
+  50% {-webkit-transform: rotate(9deg);}
+  75% {-webkit-transform: rotate(-4deg);}
   100% {-webkit-transform: rotate(0deg);}
 }
 
 @-ms-keyframes wiggle {
-  0% {-ms-transform: rotate(1deg);}
-  25% {-ms-transform: rotate(-1deg);}
-  50% {-ms-transform: rotate(1.5deg);}
-  75% {-ms-transform: rotate(-5deg);}
+  0% {-ms-transform: rotate(0deg);}
+  25% {-ms-transform: rotate(-0.5deg);}
+  50% {-ms-transform: rotate(1.2deg);}
+  75% {-ms-transform: rotate(-0.4deg);}
   100% {-ms-transform: rotate(0deg);}
 }
 
 @keyframes wiggle {
-  0% {transform: rotate(10deg);}
-  25% {transform: rotate(-10deg);}
-  50% {transform: rotate(20deg);}
-  75% {transform: rotate(-5deg);}
+  0% {transform: rotate(0deg);}
+  25% {transform: rotate(-5deg);}
+  50% {transform: rotate(9deg);}
+  75% {transform: rotate(-4deg);}
   100% {transform: rotate(0deg);}
 }
     
@@ -351,7 +359,7 @@ iframe{
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.9;
+    opacity: 0.95;
     background-color: #AAADAE; /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer; /* Add a pointer on hover */
