@@ -899,17 +899,17 @@ $(document).on("scroll", function () {
   for (var i = 0; i < tags.length; i++) {
     var tag = tags[i]
 
-    if ($(tag).position().top < 2*pageTop) {
+    if ($(tag).position().top < 0.4*pageTop) {
       $(tag).addClass("visible")
     } 
     
     
- if ($(tag).position().top < pageTop) {
+ if ($(tag).position().top < 0.3*pageTop) {
       $(tag).removeClass("visible")
     } 
     
 
-   else if ($(tag).position().top > 2*pageTop) {
+   else if ($(tag).position().top > 0.4*pageTop) {
       $(tag).removeClass("visible")
     } 
      
@@ -930,17 +930,17 @@ $(document).on("scroll", function () {
   for (var i = 0; i < tags.length; i++) {
     var tag = tags[i]
 
-    if ($(tag).position().top < 2*pageTop) {
+    if ($(tag).position().top < 0.3*pageTop) {
       $(tag).addClass("visible")
     } 
     
     
- if ($(tag).position().top < pageTop) {
+ if ($(tag).position().top < 0.2*pageTop) {
       $(tag).removeClass("visible")
     } 
     
 
-   else if ($(tag).position().top > 2*pageTop) {
+   else if ($(tag).position().top > 0.3*pageTop) {
       $(tag).removeClass("visible")
     } 
      
@@ -1035,4 +1035,3 @@ $(window).scroll(function() {
     
 
 </script>
-
