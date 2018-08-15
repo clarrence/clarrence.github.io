@@ -82,10 +82,51 @@ section3.visible {
 }
     
     
+section4 {
+  opacity: 0.2;
+  transition: opacity 0.5s;
+  transition-timing-function: ease-out;  
+ 
+}
+
+
+section4:hover {
+  opacity:1
+  }
+
+
+section4.visible { 
+  opacity: 1;
+}
+    
+     
+section5 {
+  opacity: 0.2;
+  transition: opacity 0.5s;
+  transition-timing-function: ease-out;  
+ 
+}
+
+
+section5:hover {
+  opacity:1
+  }
+
+
+section5.visible { 
+  opacity: 1;
+}
+    
+      
     
     
-    
-    
+.containerD {
+    position: relative;
+    width: 100%;
+    float:left;
+    opacity: 0.2;
+}
+ 
      
     
     
@@ -313,6 +354,13 @@ color: white;
     opacity:1;
 }
 
+    
+.containerD:hover .image {
+    opacity:1;
+}
+
+/*
+
 iframe{
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
     filter: alpha(opacity=10);
@@ -336,6 +384,7 @@ iframe{
     -webkit-transition:all 0.5s linear;
 }
 
+*/
 
 .button1 {
   font-family: 'Press Start 2p', sans-serif;
@@ -602,12 +651,12 @@ iframe{
 </div>
 </section3>
 
-
+<div class="containerD">
  <div id='vrview'></div>
-    
+</div >
     
 
-
+<section4>
 <div class="containerhalf">
   <img src="https://static.tumblr.com/u7eiuiz/rJYp913or/poster--burton.jpg" alt="Avatar" class="image" style="width:100%" onContextMenu="return false"  onDragStart="return false" galleryimg="no" >
   <div class="middle">
@@ -615,16 +664,16 @@ iframe{
   </div>
 </div>
 
+</section4>
 
-
-
+<section5>
 <div class="containerhalf">
   <img src="https://static.tumblr.com/u7eiuiz/i8Dp91ngk/cash-leveled-minus-patch.jpg" alt="Avatar" class="image" style="width:100%" onContextMenu="return false"  onDragStart="return false" galleryimg="no" >
   <div class="middle">
     <div class="text"> </div>
   </div>
 </div>
-
+</section5>
     
 
 <div class="containerhalf">
@@ -842,6 +891,64 @@ $(document).on("scroll", function () {
 })
 
 
+$(document).on("scroll", function () {
+  var pageTop = $(document).scrollTop()
+  var pageBottom = pageTop + $(window).height()
+  var tags = $("section4")
+
+  for (var i = 0; i < tags.length; i++) {
+    var tag = tags[i]
+
+    if ($(tag).position().top < 2*pageTop) {
+      $(tag).addClass("visible")
+    } 
+    
+    
+ if ($(tag).position().top < pageTop) {
+      $(tag).removeClass("visible")
+    } 
+    
+
+   else if ($(tag).position().top > 2*pageTop) {
+      $(tag).removeClass("visible")
+    } 
+     
+    
+    
+   
+  }
+})
+
+
+
+
+$(document).on("scroll", function () {
+  var pageTop = $(document).scrollTop()
+  var pageBottom = pageTop + $(window).height()
+  var tags = $("section5")
+
+  for (var i = 0; i < tags.length; i++) {
+    var tag = tags[i]
+
+    if ($(tag).position().top < 2*pageTop) {
+      $(tag).addClass("visible")
+    } 
+    
+    
+ if ($(tag).position().top < pageTop) {
+      $(tag).removeClass("visible")
+    } 
+    
+
+   else if ($(tag).position().top > 2*pageTop) {
+      $(tag).removeClass("visible")
+    } 
+     
+    
+    
+   
+  }
+})
 
 
 
@@ -849,6 +956,24 @@ $(document).on("scroll", function () {
 
 
 
+
+
+
+
+
+
+$(window).scroll(function() {
+  var scrollTop = $(this).scrollTop();
+
+  $('.containerD').css({
+   opacity: function() {
+      var elementHeight = $(this).height(),
+          opacity = ((1 - (elementHeight - scrollTop) / elementHeight) * 1.2) + 0.2;
+          
+      return opacity;
+    }
+  });
+});
 
 
 
@@ -910,3 +1035,4 @@ $(document).on("scroll", function () {
     
 
 </script>
+
