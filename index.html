@@ -14,152 +14,6 @@
 
 
 <style>
-
-
-
-
-section {
-  opacity: 1;
-  transition: opacity 0.5s;
-  transition-timing-function: ease-out;  
- 
-}
-
-
-section:hover {
-  opacity:1
-  }
-
-
-section.invisible { 
-  opacity: 0.2;
-}
-    
-    
-    
-    
-    
-    
-   
-section2 {
-  opacity: 0.2;
-  transition: opacity 0.5s;
-  transition-timing-function: ease-out;  
- 
-}
-
-
-section2:hover {
-  opacity:1
-  }
-
-
-section2.visible { 
-  opacity: 1;
-}
-    
-    
-    
-    
-    
-    
-    
-section3 {
-  opacity: 0.2;
-  transition: opacity 0.5s;
-  transition-timing-function: ease-out;  
- 
-}
-
-
-section3:hover {
-  opacity:1
-  }
-
-
-section3.visible { 
-  opacity: 1;
-}
-    
-    
-section4 {
-  opacity: 0.2;
-  transition: opacity 0.5s;
-  transition-timing-function: ease-out;  
- 
-}
-
-
-section4:hover {
-  opacity:1
-  }
-
-
-section4.visible { 
-  opacity: 1;
-}
-    
-     
-section5 {
-  opacity: 0.2;
-  transition: opacity 0.5s;
-  transition-timing-function: ease-out;  
- 
-}
-
-
-section5:hover {
-  opacity:1
-  }
-
-
-section5.visible { 
-  opacity: 1;
-}
-    
-      
-    
-    
-.containerD {
-    position: relative;
-    width: 100%;
-    float:left;
-    opacity: 0.2;
-}
- 
-     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
 .zing {
 	max-width: 250px;
@@ -322,6 +176,7 @@ color: white;
 }
 
 .image {
+  opacity: 0.2;
   display: block;
   width: 100%;
   height: auto;
@@ -354,13 +209,6 @@ color: white;
     opacity:1;
 }
 
-    
-.containerD:hover .image {
-    opacity:1;
-}
-
-/*
-
 iframe{
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
     filter: alpha(opacity=10);
@@ -384,7 +232,6 @@ iframe{
     -webkit-transition:all 0.5s linear;
 }
 
-*/
 
 .button1 {
   font-family: 'Press Start 2p', sans-serif;
@@ -620,7 +467,7 @@ iframe{
 
 
 
-<section>
+
 
 <div class="container">
   <img src="https://static.tumblr.com/u7eiuiz/gEqp9142u/billboard-trim.gif" alt="Avatar" class="image" style="width:100%" onContextMenu="return false"  onDragStart="return false" galleryimg="no" >
@@ -629,9 +476,6 @@ iframe{
   </div>
 </div>
 
-</section>
-
-<section2>
 
 <div class="container">
   <img src="https://static.tumblr.com/u7eiuiz/aANp8060g/mount.gif" alt="mountinz" class="image" style="width:100%" onContextMenu="return false"  onDragStart="return false" galleryimg="no" >
@@ -641,22 +485,22 @@ iframe{
 </div>
 
 
-</section2>
-<section3>
+
+
 <div class="container">
   <img src="https://static.tumblr.com/u7eiuiz/Hz4p915dz/brian.gif" alt="Avatar" class="image" style="width:100%" onContextMenu="return false"  onDragStart="return false" galleryimg="no" >
   <div class="middle">
     <div class="text"> </div>
   </div>
 </div>
-</section3>
 
-<div class="containerD">
+
+
  <div id='vrview'></div>
-</div >
+    
     
 
-<section4>
+
 <div class="containerhalf">
   <img src="https://static.tumblr.com/u7eiuiz/rJYp913or/poster--burton.jpg" alt="Avatar" class="image" style="width:100%" onContextMenu="return false"  onDragStart="return false" galleryimg="no" >
   <div class="middle">
@@ -664,16 +508,16 @@ iframe{
   </div>
 </div>
 
-</section4>
 
-<section5>
+
+
 <div class="containerhalf">
   <img src="https://static.tumblr.com/u7eiuiz/i8Dp91ngk/cash-leveled-minus-patch.jpg" alt="Avatar" class="image" style="width:100%" onContextMenu="return false"  onDragStart="return false" galleryimg="no" >
   <div class="middle">
     <div class="text"> </div>
   </div>
 </div>
-</section5>
+
     
 
 <div class="containerhalf">
@@ -764,243 +608,6 @@ function myFunction() {
   /* Alert the copied text */
   alert("Copied the text: " + copyText.value);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-$(document).on("scroll", function () {
-  var pageTop = $(document).scrollTop()
-  var pageBottom = pageTop + $(window).height()
-  var tags = $("section")
-
-  for (var i = 0; i < tags.length; i++) {
-    var tag = tags[i]
-
-    if ($(tag).position().top < 10*pageTop) {
-      $(tag).addClass("invisible")
-    } 
-    
-    
- 
-
-   else if ($(tag).position().top > 10*pageTop) {
-      $(tag).removeClass("invisible")
-    } 
-     
-    
-    
-   
-  }
-})
-
-
-$(document).on("scroll", function () {
-  var pageTop = $(document).scrollTop()
-  var pageBottom = pageTop + $(window).height()
-  var tags = $("section2")
-
-  for (var i = 0; i < tags.length; i++) {
-    var tag = tags[i]
-
-    if ($(tag).position().top < 10*pageTop) {
-      $(tag).addClass("visible")
-    } 
-    
-    
- if ($(tag).position().top < 2*pageTop) {
-      $(tag).removeClass("visible")
-    } 
-    
-
-   else if ($(tag).position().top > 10*pageTop) {
-      $(tag).removeClass("visible")
-    } 
-     
-    
-    
-   
-  }
-})
-
-
-
-$(document).on("scroll", function () {
-  var pageTop = $(document).scrollTop()
-  var pageBottom = pageTop + $(window).height()
-  var tags = $("section3")
-
-  for (var i = 0; i < tags.length; i++) {
-    var tag = tags[i]
-
-    if ($(tag).position().top < 2*pageTop) {
-      $(tag).addClass("visible")
-    } 
-    
-    
- if ($(tag).position().top < pageTop) {
-      $(tag).removeClass("visible")
-    } 
-    
-
-   else if ($(tag).position().top > 2*pageTop) {
-      $(tag).removeClass("visible")
-    } 
-     
-    
-    
-   
-  }
-})
-
-
-$(document).on("scroll", function () {
-  var pageTop = $(document).scrollTop()
-  var pageBottom = pageTop + $(window).height()
-  var tags = $("section4")
-
-  for (var i = 0; i < tags.length; i++) {
-    var tag = tags[i]
-
-    if ($(tag).position().top < 0.4*pageTop) {
-      $(tag).addClass("visible")
-    } 
-    
-    
- if ($(tag).position().top < 0.3*pageTop) {
-      $(tag).removeClass("visible")
-    } 
-    
-
-   else if ($(tag).position().top > 0.4*pageTop) {
-      $(tag).removeClass("visible")
-    } 
-     
-    
-    
-   
-  }
-})
-
-
-
-
-$(document).on("scroll", function () {
-  var pageTop = $(document).scrollTop()
-  var pageBottom = pageTop + $(window).height()
-  var tags = $("section5")
-
-  for (var i = 0; i < tags.length; i++) {
-    var tag = tags[i]
-
-    if ($(tag).position().top < 0.3*pageTop) {
-      $(tag).addClass("visible")
-    } 
-    
-    
- if ($(tag).position().top < 0.2*pageTop) {
-      $(tag).removeClass("visible")
-    } 
-    
-
-   else if ($(tag).position().top > 0.3*pageTop) {
-      $(tag).removeClass("visible")
-    } 
-     
-    
-    
-   
-  }
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-$(window).scroll(function() {
-  var scrollTop = $(this).scrollTop();
-
-  $('.containerD').css({
-   opacity: function() {
-      var elementHeight = $(this).height(),
-          opacity = ((1 - (elementHeight - scrollTop) / elementHeight) * 1.2) + 0.2;
-          
-      return opacity;
-    }
-  });
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
