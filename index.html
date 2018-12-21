@@ -4,7 +4,10 @@
 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:800|Press+Start+2P" rel="stylesheet">
 
-
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.slim.js"
+  integrity="sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA="
+  crossorigin="anonymous"></script>
 
 <link rel="icon"  href="https://raw.githubusercontent.com/clarrence/clarrence.github.io/master/PEEK%20cutout%20mini.png">
 
@@ -14,6 +17,10 @@
 
 
 <style>
+	
+#idModal{
+display: none;  
+}
     
 .zing {
 	max-width: 250px;
@@ -433,10 +440,13 @@ iframe{
 
           
      Laurie is an <a href="https://www.instagram.com/laurie_._._l/">illustrator & animator</a>,<br>
-      with past experience in <a href="https://imdb.com/name/nm4960297/">sound design</a>.
+      with past experience in <div id="idToHover">  <a href="https://imdb.com/name/nm4960297/">sound design</a>. </div>
 
   
                               
+    <div id="idModal">
+      <iframe src="https://imdb.com/name/nm4960297/"></iframe>
+    </div>  
 
 
 
@@ -640,6 +650,20 @@ function myFunction() {
         }, animationLength);
     }
 //# sourceURL=pen.js
+	
+$('#idToHover').hover(function(){
+  $('#idModal').css("display", "block");
+})
+
+$('#idToHover').mouseout(function(){
+  $('#idModal').css("display", "none");
+})
+	
+	
+	
+	
+	
+	
     
 
 </script>
