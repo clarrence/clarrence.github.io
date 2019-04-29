@@ -17,6 +17,99 @@
 
 
 <style>
+
+
+
+
+.overlay {
+  -webkit-animation: squiggly-anim 0.34s linear infinite;
+          animation: squiggly-anim 0.34s linear infinite;
+}
+
+@-webkit-keyframes squiggly-anim {
+  0% {
+    -webkit-filter: url("#squiggly-0");
+            filter: url("#squiggly-0");
+  }
+  25% {
+    -webkit-filter: url("#squiggly-1");
+            filter: url("#squiggly-1");
+  }
+  50% {
+    -webkit-filter: url("#squiggly-2");
+            filter: url("#squiggly-2");
+  }
+  75% {
+    -webkit-filter: url("#squiggly-3");
+            filter: url("#squiggly-3");
+  }
+  100% {
+    -webkit-filter: url("#squiggly-4");
+            filter: url("#squiggly-4");
+  }
+}
+@keyframes squiggly-anim {
+  0% {
+    -webkit-filter: url("#squiggly-0");
+            filter: url("#squiggly-0");
+  }
+  25% {
+    -webkit-filter: url("#squiggly-1");
+            filter: url("#squiggly-1");
+  }
+  50% {
+    -webkit-filter: url("#squiggly-2");
+            filter: url("#squiggly-2");
+  }
+  75% {
+    -webkit-filter: url("#squiggly-3");
+            filter: url("#squiggly-3");
+  }
+  100% {
+    -webkit-filter: url("#squiggly-4");
+            filter: url("#squiggly-4");
+  }
+}
+
+ 
+
+
+
+.overlay {
+  position: absolute; 
+  font-family: Gill Sans MT;
+  bottom: 0; 
+  color: #f1f1f1;
+  width: 100%;
+  transition: 2s ease-in-out;
+  opacity:0;
+  color: white;
+  font-size:calc(8px + 1.5vw);
+  padding: 20px;
+  text-align: center;
+  
+  
+}
+
+.container:hover .overlay {
+  opacity: 1;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 #idModal{
 display: none;  
@@ -406,6 +499,9 @@ iframe{
 .codegena{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.codegena iframe{position:absolute;top:0;left:0;width:100%;height:100%;}
 
 
+
+
+
 </style>
 </head>
 
@@ -486,9 +582,8 @@ iframe{
 
 <div class="container">
   <img src="https://static.tumblr.com/u7eiuiz/gEqp9142u/billboard-trim.gif" alt="Avatar" class="image" style="width:100%" onContextMenu="return false"  onDragStart="return false" galleryimg="no" >
-  <div class="middle">
-    <div class="text"> </div>
-  </div>
+    <div class="overlay">Paul Draper</div>
+
 </div>
 
 
@@ -584,11 +679,15 @@ iframe{
 
 <div class="containerhalf">
 	
-<div style="padding:180% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/332776020?autoplay=1&loop=1&color=aaadae&title=0&byline=0&background=1&muted=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>	
+<video width="100%" height="85%" controls muted autoplay>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
 	
 	
   <div class="middle">
-    <div class="text"> </div>
+    <div class="text"></div>
   </div>
 </div>	
 
@@ -606,6 +705,34 @@ iframe{
  
 
 
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+
+    
+    <filter id="squiggly-0">
+      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="0"/>
+      <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="1.6" />
+    </filter>
+    <filter id="squiggly-1">
+      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="1"/>
+<feDisplacementMap in="SourceGraphic" in2="noise" scale="1.8" />
+    </filter>
+    
+    <filter id="squiggly-2">
+      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="2"/>
+<feDisplacementMap in="SourceGraphic" in2="noise" scale="1.6" />
+    </filter>
+    <filter id="squiggly-3">
+      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="3"/>
+<feDisplacementMap in="SourceGraphic" in2="noise" scale="1.8" />
+    </filter>
+    
+    <filter id="squiggly-4">
+      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="4"/>
+<feDisplacementMap in="SourceGraphic" in2="noise" scale="1.6" />
+    </filter>
+  </defs> 
+</svg>
 
 
 </body>
