@@ -19,6 +19,20 @@
 <style>
 
 
+
+/* iDevices Only */
+
+@supports (-webkit-text-size-adjust:none) and (not (-ms-accelerator:true))
+and (not (-moz-appearance:none))
+{
+  svg {
+    filter:none !important;
+  }
+
+}
+
+
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
