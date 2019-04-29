@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:800|Press+Start+2P" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
     <script
   src="https://code.jquery.com/jquery-3.1.1.slim.js"
@@ -22,8 +23,8 @@
 
 
 @media (max-width:629px) {
-  .overlay {
-    display: none;
+  .wigglebox {
+    display: none !important;
   }
 }
 
@@ -98,7 +99,7 @@
   padding: 2px 16px;
   background-color: white;
   color: black;
-  font-family: Gill Sans MT;
+  font-family: Lato;
   font-size: calc(12px + 1.5vw);
   text-align: center;
   padding: 40px;
@@ -182,7 +183,7 @@
 
 .overlay {
   position: absolute; 
-  font-family: Gill Sans MT;
+  font-family: Lato;
   bottom: 5; 
   color: #f1f1f1;
   width: 100%;
@@ -199,9 +200,6 @@
   opacity: 1;
 
 }
-
-
-
 
 
 
@@ -838,7 +836,7 @@ iframe{
  
 
 
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg id="wigglebox" xmlns="http://www.w3.org/2000/svg" version="1.1">
   <defs>
 
     
