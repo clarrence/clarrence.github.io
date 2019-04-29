@@ -2,6 +2,8 @@
 <html onContextMenu="return false">
 <head>
 
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:800|Press+Start+2P" rel="stylesheet">
 
     <script
@@ -19,30 +21,8 @@
 <style>
 
 
-
-/* iDevices Only */
-
-@supports (-webkit-text-size-adjust:none) and (not (-ms-accelerator:true))
-and (not (-moz-appearance:none))
-{
-  svg {
-    filter:none !important;
-    opacity:0 !important;
-  }
-  
-  overlay {
-  	display: none !important;
-
-}
-
-
-@media screen and (max-width: 800px) {
+@media (max-width:629px) {
   .overlay {
-    visibility: hidden;
-    clear: both;
-    float: left;
-    margin: 10px auto 5px 20px;
-    width: 28%;
     display: none;
   }
 }
@@ -87,7 +67,7 @@ and (not (-moz-appearance:none))
 }
 
 @keyframes animatetop {
-  from {right:-300px; opacity:0}
+  from {right:-600px; opacity:0}
   to {right:0; opacity:1}
 }
 
@@ -735,7 +715,7 @@ iframe{
 
 <div class="container">
   <img src="https://static.tumblr.com/u7eiuiz/gEqp9142u/billboard-trim.gif" alt="Avatar" class="image" style="width:100%" onContextMenu="return false"  onDragStart="return false" galleryimg="no" >
-    <div class="overlay">Paul Draper</div>
+    <div class="overlay" style="color:white;">Paul Draper</div>
 
 </div>
 
@@ -755,7 +735,7 @@ iframe{
   <!-- Trigger/Open The Modal -->
 
   
- <div class="overlay" style="color:#aeaaaa;">GIFs</div>
+ <div class="overlay" style="color:black;">GIFs</div>
  
 
 </div>
