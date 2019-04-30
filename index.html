@@ -48,8 +48,27 @@
     animation: none !important;
   }
 }
-}}
+}
+}
 
+
+@supports (overflow:-webkit-marquee) and (justify-content:inherit)
+{
+ .overlay {
+    -webkit-animation:  none !important;
+    animation: none !important;
+  }
+  .modal-header {
+    -webkit-animation:  none !important;
+    animation: none !important;
+  }
+    .modal-body {
+    -webkit-animation:  none !important;
+    animation: none !important;
+  }
+}
+}
+}
 
 @media (max-width:600px) {
   .overlay {
