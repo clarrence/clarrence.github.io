@@ -35,10 +35,6 @@
   .overlay {
      font-size: 28px !important;
   }
-  
-   .container .myBtn  {
-      font-size: 28px !important;
-  }
 }
 
 
@@ -194,6 +190,153 @@
   background-color: white;
   color: white;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The Modal (background) */
+.modalb {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-contentb {
+  position: relative;
+  background-color: #404040;
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetopb;
+  -webkit-animation-durationb: 1.2s;
+  animation-name: animatetopb;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  max-width: 900px
+  
+    
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetopb {
+  from {opacity:0} 
+  to {opacity:1}
+}
+
+@keyframes animatetopb {
+  from {opacity:0}
+  to {opacity:1}
+}
+
+/* The Close Button */
+.closeb {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closeb:hover,
+.closeb:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-headerb {
+  padding: 2px 16px;
+  background-color: #404040;
+  color: white;
+  font-family: Lato;
+  font-size: calc(22px + 1.5vw);
+  text-align: center;
+  padding: 40px;
+  -webkit-animation: squiggly-anim 0.34s linear infinite;
+  animation: squiggly-anim 0.34s linear infinite;
+}
+
+.modal-bodyb {
+  color: white;
+  font-family: Lato;
+  font-size: calc(9px + 1vw);
+  text-align: center;
+
+  
+}
+
+.modal-footerb {
+  padding: 2px 16px;
+  background-color: #404040;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -471,6 +614,28 @@ color: white;
 }
 
 
+.container .myBtnb {
+  position: absolute;
+  top: 26px;
+  right: 0;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: #aeaaaa;
+  background: transparent;
+  font-size:calc(22px + 1.5vw);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  opacity: 0;
+  transition: 1s ease-in-out;
+    transition-delay: 1s;
+  
+}
+
+.container:hover .myBtnb {
+  opacity: 0.8;
+}
 
 
 
@@ -693,6 +858,16 @@ iframe{
     margin-right: auto;
 }
 
+.video-modal  {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 #status {
        display: block;
     margin-left: auto;
@@ -841,6 +1016,7 @@ iframe{
 
 
 <div class="container">
+<div class="myBtnb" id="myBtnb" style="color:white;">☉</div>
   <img src="https://static.tumblr.com/u7eiuiz/aANp8060g/mount.gif" alt="mountinz" class="image" style="width:100%" onContextMenu="return false"  onDragStart="return false" galleryimg="no" >
    <div class="overlay">Gengahr</div>
 </div>
@@ -1030,14 +1206,85 @@ iframe{
       
     </div>
   </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- The Modal gengahr-->
+<div id="myModalb" class="modalb">
+
+  <!-- Modal content -->
+  <div class="modal-contentb">
+  
+
+  
+    <div class="modal-headerb">
+      <span class="closeb">&times;</span>
+      <h9>Gengahr</h9>
+    </div>
+
+    <div class="modal-bodyb">
+      <h10>I colaborated with animator Dan W Jacobs<br>
+          on two music videos for the band Gengahr.
+      </br></h10>
+      <br>
+      <br>
+      
+    </div>
+    
+  
+       
+<iframe class="video-modal" width="560" height="315" src="https://www.youtube-nocookie.com/embed/qFxhHFD2LBE?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ 
+</div>     
+  
+    
+    
+
+    <div class="modal-footerb">
+      <h3>⠀</h3>
+      
+      <br><br>
+      
+    </div>
+  </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
 
 </html>
 
 
-
-<!-- The Modal genghar -->
-<div id="myModal2" class="modal2">
-</div>
 
 
 
@@ -1163,6 +1410,34 @@ window.onclick = function(event) {
   }
 }	
 	
+
+// Get the modal
+var modalb = document.getElementById('myModalb');
+
+// Get the button that opens the modal
+var btnb = document.getElementById("myBtnb");
+
+// Get the <span> element that closes the modal
+var spanb = document.getElementsByClassName("closeb")[0];
+
+// When the user clicks the button, open the modal 
+btnb.onclick = function() {
+  modalb.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+spanb.onclick = function() {
+  modalb.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modalb) {
+    modalb.style.display = "none";
+  }
+}	
+	
+
     
 
 </script>
