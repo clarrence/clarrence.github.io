@@ -731,7 +731,7 @@ color: white;
 
  .myBtnmute {
      top:6;
-     right:8;
+     left:8;
 position:fixed;
 color: white;
   background: transparent;
@@ -739,13 +739,13 @@ color: white;
 opacity:0.7;
   transition: .1s ease-in-out;
   display: inline-block;
-  padding: 0px 3px;
+  padding: 0px 7px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: #303030;
+  background-color: #606060;
   border: none;
   border-radius: 5px;
   box-shadow: 0 9px #999;
@@ -757,6 +757,7 @@ opacity:0.7;
 .mybtnmute:active {
   background-color: #F6C125;
   box-shadow: 0 5px #666;
+  padding: 0px 3px;
   transform: translateY(4px);
 }
     
@@ -1195,7 +1196,7 @@ iframe{
 	       
 
 </div>
-<button onclick="myFunction(),mutePage()"  class="myBtnmute" id="myBtnmute" >🕪</button>
+<button onclick="myFunction(),mutePage()"  class="myBtnmute" id="myBtnmute" >🔊</button>
 
 
 
@@ -1757,10 +1758,10 @@ function mutePage() {
 
 function myFunction() {
   var x = document.getElementById("myBtnmute");
-  if (x.innerHTML === "🕪") {
-    x.innerHTML = "🕨";
+  if (x.innerHTML === "🔊") {
+    x.innerHTML = "🔈";
   } else {
-    x.innerHTML = "🕪";
+    x.innerHTML = "🔊";
   }
 }
 
