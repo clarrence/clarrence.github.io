@@ -372,6 +372,100 @@
 
 
 
+/* The Modal (background) */
+.modalc {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-contentc {
+  position: relative;
+  background-color: black;
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetopb;
+  -webkit-animation-durationb: 1.2s;
+  animation-name: animatetopb;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  max-width: 900px
+  
+    
+}
+
+
+.modal-contentc #iframe {
+    opacity: 1 !important;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetopb {
+  from {opacity:0} 
+  to {opacity:1}
+}
+
+@keyframes animatetopb {
+  from {opacity:0}
+  to {opacity:1}
+}
+
+/* The Close Button */
+.closec {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closec:hover,
+.closec:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-headerc {
+  padding: 2px 16px;
+  background-color: black;
+  color: white;
+  font-family: Lato;
+  font-size: calc(22px + 1.5vw);
+  text-align: center;
+  padding: 40px;
+  -webkit-animation: squiggly-anim 0.34s linear infinite;
+  animation: squiggly-anim 0.34s linear infinite;
+}
+
+.modal-bodyc {
+  color: white;
+  font-family: Lato;
+  font-size: calc(9px + 1vw);
+  text-align: center;
+
+  
+}
+
+.modal-footerc {
+  padding: 2px 16px;
+  background-color: black;
+  color: white;
+}
+
+
+
+
 
 
 
@@ -1537,7 +1631,38 @@ iframe{
   
   
   
+    
+  <!-- The Modal draper-->
+<div id="myModalc" class="modalc">
+
+  <!-- Modal content -->
+  <div class="modal-contentc">
   
+
+  
+    <div class="modal-headerc">
+      <span class="closec">&times;</span>
+      <h9>Paul Draper</h9>
+    </div>
+
+    <div class="modal-bodyc">
+      <h10>I collaborated with Dan W Jacobs<br>
+          on a music video for Paul Draper.
+      </br></h10>
+      <br>
+      <br>
+      
+    </div>
+    
+  
+       
+<iframe class="video-modal" width="560" height="315" src="https://www.youtube.com/embed/ORdsJhh5qao?VQ=HD1080" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
+    
+ 
+<br><br>
+
+      
+    </div>
   
   
   
@@ -1717,6 +1842,41 @@ window.onclick = function(event) {
 
 
 
+
+
+// Get the modal
+var modalc = document.getElementById('myModalc');
+
+// Get the button that opens the modal
+var btnc = document.getElementById("myBtnc");
+
+// Get the <span> element that closes the modal
+var spanc = document.getElementsByClassName("closec")[0];
+
+// When the user clicks the button, open the modal 
+btnc.onclick = function() {
+  modalc.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+spanc.onclick = function() {
+  modalc.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modalc) {
+    modalc.style.display = "none";
+  }
+}	
+	
+
+
+
+
+
+
+
 var TxtType = function(el, toRotate, period) {
         this.toRotate = toRotate;
         this.el = el;
@@ -1842,4 +2002,3 @@ function myFunction() {
 
 
 </script>
-
