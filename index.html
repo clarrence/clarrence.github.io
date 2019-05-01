@@ -508,6 +508,28 @@
 
 
 
+.overlayright {
+  position: absolute; 
+  font-family: Lato;
+  left: 65%; 
+  bottom: 15;
+  width: 100%;
+  transition: .2s ease-in-out;
+  opacity:0;
+  font-size:calc(14px + 1.5vw);
+
+  
+  
+}
+
+.container360:hover .overlayright {
+  opacity: 1;
+
+}
+
+
+
+
 
 
 
@@ -777,7 +799,7 @@ opacity:0.2;
 
 
 .container360 .myBtnd {
-    position:absolute;
+  position:absolute;
   top: 0;
   right: 8;
   background: transparent;
@@ -785,6 +807,10 @@ opacity:0.2;
   opacity: 0;
   transition: 1s ease-in-out;
     transition-delay: .5s;
+  
+}
+
+
   
 }
 
@@ -1283,10 +1309,11 @@ iframe{
 </div>	
 
 <div class="container360">
-<div class="myBtnd" id="myBtnd" style="color:white;">☉</div>
+
   <img src="https://raw.githubusercontent.com/clarrence/clarrence.github.io/master/wheelchairguy.jpg" alt="Avatar" class="image" style="width:100%" onContextMenu="return false"  onDragStart="return false" galleryimg="no" >
  
     <div class="overlaymencap" style="color:black;">Mencap</div>
+        <div class="overlayright" style="color:white;">Coming Soon</div>
  
 </div>
 
