@@ -514,7 +514,8 @@
   left: 65%; 
   bottom: 15;
   width: 100%;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  transition-delay: .4s;
   opacity:0;
   font-size:calc(14px + 1.5vw);
 
@@ -525,6 +526,13 @@
 .container360:hover .overlayright {
   opacity: 1;
 
+}
+
+.overlayright:hover {
+    
+    color: navy !important;
+    transition-delay: 0s !important;
+    
 }
 
 
@@ -797,13 +805,12 @@ opacity:0.2;
 
 
 
-
 .container360 .myBtnd {
-  position:absolute;
+ 
   top: 0;
   right: 8;
   background: transparent;
-  font-size:calc(20px + 1.5vw);
+  font-size: calc(20px + 1.5vw);
   opacity: 0;
   transition: 1s ease-in-out;
     transition-delay: .5s;
@@ -1310,10 +1317,18 @@ iframe{
 
 <div class="container360">
 
+
   <img src="https://raw.githubusercontent.com/clarrence/clarrence.github.io/master/wheelchairguy.jpg" alt="Avatar" class="image" style="width:100%" onContextMenu="return false"  onDragStart="return false" galleryimg="no" >
  
     <div class="overlaymencap" style="color:black;">Mencap</div>
-        <div class="overlayright" style="color:white;">Coming Soon</div>
+        
+        
+        
+        <div id="myBtnd" class="overlayright" style="color:white;">In Progress</div>
+        
+        
+ 
+ 
  
 </div>
 
@@ -1827,3 +1842,4 @@ function myFunction() {
 
 
 </script>
+
