@@ -48,7 +48,7 @@
      font-size: 30px !important;
   }
   
-      .container .myBtnd {
+      .container360 .myBtnd {
      font-size: 30px !important;
   }
   
@@ -68,7 +68,13 @@
      font-size: 30px !important;
   }
   
+       .myBtnmute {
+     font-size: 20px !important;
+     right: 105 !important;
+  }
   
+  
+
 
   
   .button1 {
@@ -480,6 +486,28 @@
 
 
 
+.overlaymencap {
+  position: absolute; 
+  font-family: Lato;
+  Left: 15; 
+  bottom: 15;
+  width: 100%;
+  transition: .2s ease-in-out;
+  opacity:0;
+  font-size:calc(14px + 1.5vw);
+
+  
+  
+}
+
+.container360:hover .overlaymencap {
+  opacity: 1;
+
+}
+
+
+
+
 
 
 
@@ -642,18 +670,11 @@ color: white;
 
 
 .container .myBtn {
-  position: absolute;
-  top: 8%;
-  right: 0;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  color: #aeaaaa;
+  position:absolute;
+  top: 0;
+  right: 8;
   background: transparent;
   font-size:calc(20px + 1.5vw);
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  text-align: center;
   opacity: 0;
   transition: 1s ease-in-out;
     transition-delay: .5s;
@@ -666,18 +687,11 @@ color: white;
 
 
 .container .myBtnb {
-  position: absolute;
-  top: 8%;
-  right: 0;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  color: #aeaaaa;
+  position:absolute;
+  top: 0;
+  right: 8;
   background: transparent;
   font-size:calc(20px + 1.5vw);
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  text-align: center;
   opacity: 0;
   transition: 1s ease-in-out;
     transition-delay: .5s;
@@ -692,18 +706,11 @@ color: white;
 
 
 .container .myBtnc {
-  position: absolute;
-  top: 8%;
-  right: 0;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  color: #aeaaaa;
+  position:absolute;
+  top: 0;
+  right: 8;
   background: transparent;
   font-size:calc(20px + 1.5vw);
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  text-align: center;
   opacity: 0;
   transition: 1s ease-in-out;
     transition-delay: .5s;
@@ -713,6 +720,77 @@ color: white;
 .container:hover .myBtnb {
   opacity: 0.8;
 }
+
+
+
+
+
+
+
+
+
+ .myBtnmute {
+     top:6;
+     right:8;
+position:fixed;
+color: white;
+  background: transparent;
+  font-size:calc(12px + 1.5vw);
+opacity:0.7;
+  transition: .1s ease-in-out;
+  display: inline-block;
+  padding: 0px 3px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #303030;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 9px #999;
+    z-index: 999;
+}
+
+.mybtnmute:hover {background-color: #404040}
+
+.mybtnmute:active {
+  background-color: #F6C125;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+    
+  
+}
+
+
+
+
+
+
+
+.container360 .myBtnd {
+    position:absolute;
+  top: 0;
+  right: 8;
+  background: transparent;
+  font-size:calc(20px + 1.5vw);
+  opacity: 0;
+  transition: 1s ease-in-out;
+    transition-delay: .5s;
+  
+}
+
+
+.container360:hover .myBtnd {
+  opacity: 0.8;
+}
+
+
+
+
+
+
 
 .container360 {
     position: relative;
@@ -1049,7 +1127,6 @@ iframe{
 
 <body bgcolor="#aaadae" onContextMenu="return false" >
 
-
 <div id='preloader'>
    <div id='status'>
    
@@ -1082,7 +1159,7 @@ iframe{
  <h3> 
      
 
-                               <a style="font-family:lato" class="typewrite" data-period="2000" data-type='[ "Sound Editor" , "Animator" , "Graphic Artist" , "Web Designer" , "Musician" , "Creative Coder" , "Sound Librarian" , "illustrator" , "Hey, Iʹm Laurie"    ]'>
+                               <a style="font-family:lato;font-size:" class="typewrite" data-period="2000" data-type='[ "Sound Editor" , "Animator" , "Graphic Artist" , "Web Designer" , "Musician" , "Creative Coder" , "Sound Librarian" , "illustrator" , "Hey, Iʹm Laurie"    ]'>
     <span class="wrap"></span>
   </a>
     
@@ -1111,16 +1188,21 @@ iframe{
 
      
        </h3>  
-       <h4 style="font-size:11px;text-align:center">Js Typer by<a  style="font-size:11px;text-align:center" class="item-owner-link" href="https://codepen.io/hi-im-si">Simon Shahriveri</a></h4>
+       <h4 style="font-size:11px;text-align:center">Js Typer by <a  style="font-size:11px;text-align:center" class="item-owner-link" href="https://codepen.io/hi-im-si">Simon Shahriveri</a></h4>
     
    <input type="text" value="youcanemaillaurie@gmail.com" id="myInput">    
   </div>
 	       
 
 </div>
+<button onclick="myFunction(),mutePage()"  class="myBtnmute" id="myBtnmute" >🕪</button>
+
+
+
 
 
 <div class="container2">
+
 
 
 
@@ -1190,9 +1272,10 @@ iframe{
 </div>	
 
 <div class="container360">
+<div class="myBtnd" id="myBtnd" style="color:white;">☉</div>
   <img src="https://raw.githubusercontent.com/clarrence/clarrence.github.io/master/wheelchairguy.jpg" alt="Avatar" class="image" style="width:100%" onContextMenu="return false"  onDragStart="return false" galleryimg="no" >
  
-    <div class="overlay" style="color:black;">Mencap</div>
+    <div class="overlaymencap" style="color:black;">Mencap</div>
  
 </div>
 
@@ -1638,5 +1721,71 @@ var TxtType = function(el, toRotate, period) {
         document.body.appendChild(css);
     };
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // Mute a singular HTML5 element
+function muteMe(elem) {
+    elem.muted = true;
+    elem.pause();
+}
+
+// Try to mute all video and audio elements on the page
+function mutePage() {
+    var elems = document.querySelectorAll("video, audio");
+
+    [].forEach.call(elems, function(elem) { muteMe(elem); });
+}
+    
+
+
+
+
+function myFunction() {
+  var x = document.getElementById("myBtnmute");
+  if (x.innerHTML === "🕪") {
+    x.innerHTML = "🕨";
+  } else {
+    x.innerHTML = "🕪";
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </script>
